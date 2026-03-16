@@ -27,6 +27,7 @@ services:
         condition: service_healthy
     env_file:
       - ./backend/.env
+    command: sh -c "npm run prisma:generate && npm run prisma:push && npm run prisma:seed && npm run start"
     ports:
       - "4000:4000"
 
