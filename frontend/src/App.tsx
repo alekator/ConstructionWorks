@@ -38,7 +38,7 @@ const units = ["м3", "м2", "пог.м", "шт"];
 const toDateInputValue = (isoDate: string) => isoDate.slice(0, 10);
 
 const formatDate = (isoDate: string) =>
-  new Intl.DateTimeFormat("ru-RU", { dateStyle: "medium" }).format(new Date(isoDate));
+  new Intl.DateTimeFormat("ru-RU").format(new Date(isoDate));
 
 const buildQuery = (filters: { dateFrom: string; dateTo: string; sort: "asc" | "desc" }) => {
   const params = new URLSearchParams();
