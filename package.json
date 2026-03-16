@@ -1,16 +1,18 @@
 {
-  "name": "construction-works",
-  "private": true,
-  "version": "0.1.0",
-  "workspaces": [
-    "frontend",
-    "backend"
-  ],
-  "scripts": {
-    "dev:frontend": "npm --workspace frontend run dev",
-    "dev:backend": "npm --workspace backend run dev",
-    "build": "npm run build --workspaces",
-    "lint": "npm run lint --workspaces",
-    "format": "npm run format --workspaces"
-  }
+    "name":  "construction-works",
+    "private":  true,
+    "version":  "0.1.0",
+    "workspaces":  [
+                       "frontend",
+                       "backend"
+                   ],
+    "scripts":  {
+                    "dev:frontend":  "npm --workspace frontend run dev",
+                    "dev:backend":  "npm --workspace backend run dev",
+                    "build":  "npm run build --workspaces",
+                    "lint":  "npm run lint --workspaces",
+                    "format":  "npm run format --workspaces",
+                    "test":  "npm run test --workspaces",
+                    "test:ci":  "npm run test --workspaces --if-present \u0026\u0026 npm run build --workspaces"
+                }
 }

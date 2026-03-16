@@ -102,3 +102,26 @@ npm --workspace frontend run dev
 - `POST /api/work-logs` - создание записи.
 - `PUT /api/work-logs/:id` - редактирование записи.
 - `DELETE /api/work-logs/:id` - удаление записи.
+
+## Тесты
+
+Запуск всех тестов:
+
+```bash
+npm run test
+```
+
+Запуск тестов по workspace:
+
+```bash
+npm --workspace backend run test
+npm --workspace frontend run test
+```
+
+## CI
+
+Добавлен GitHub Actions workflow `.github/workflows/ci.yml`, который на каждый push и pull request выполняет:
+
+- установку зависимостей (`npm ci`),
+- запуск тестов (`npm run test`),
+- сборку (`npm run build`).
