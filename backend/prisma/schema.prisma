@@ -1,4 +1,4 @@
-﻿generator client {
+generator client {
   provider = "prisma-client-js"
 }
 
@@ -18,7 +18,7 @@ model WorkType {
 model WorkLog {
   id          String   @id @default(cuid())
   performedAt DateTime
-  volumeValue Decimal
+  volumeValue Decimal  @db.Decimal(12, 3)
   volumeUnit  String
   workerName  String
   createdAt   DateTime @default(now())
