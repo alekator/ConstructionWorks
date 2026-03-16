@@ -1,0 +1,14 @@
+﻿node_modules
+.env
+.env.*
+!.env.example
+
+frontend/node_modules
+frontend/dist
+
+backend/node_modules
+backend/dist
+backend/.prisma
+
+.DS_Store
+Thumbs.db
